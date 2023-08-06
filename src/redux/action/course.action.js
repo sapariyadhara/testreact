@@ -23,7 +23,7 @@ export const addData = (data) => (dispatch) => {
               body: JSON.stringify(data),
         })
             .then((response) => response.json())
-            .then((data) => dispatch({type : ActionTypes.GET_COURSE , payload : data}))
+            .then((data) => dispatch({type : ActionTypes.ADD_COURSE , payload : data}))
             .catch((error) => console.log(error))
 
     } catch (error) {
@@ -31,6 +31,6 @@ export const addData = (data) => (dispatch) => {
     }
 }
 
-export const deleteData = (data) => (dispatch) => {
+// export const deleteData = (data) => (dispatch) => {
 
-}
+// }

@@ -4,14 +4,19 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useDispatch, useSelector } from 'react-redux';
 import { addData, getData } from '../../redux/action/course.action';
+import { CourseContext } from '../../Context/CourseContext';
 
 
 function Course(props) {
+    const course1 = React.useContext(CourseContext)
+    // console.log(course1, " course1");
+
     const dispatch = useDispatch()
     const courseData = useSelector(state => state.course)
-    console.log(courseData);
+    // console.log(courseData);
 
     React.useEffect(() => {
+        // dispatch(getData())
         dispatch(getData())
     })
 

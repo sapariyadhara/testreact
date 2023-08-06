@@ -9,6 +9,7 @@ import ProtectedRoutes from './container/ProtectedRoutes';
 import Course from './container/Course/Course';
 import { Provider } from 'react-redux';
 import { configurStore } from './redux/store';
+import { CourseProvider } from './Context/CourseContext';
 
 function App() {
   const store = configurStore()
@@ -16,7 +17,7 @@ function App() {
     <>
       <Provider store={store}>
 
-
+    <CourseProvider>
         <Course />
         {/* <Header />
       <Routes>
@@ -27,6 +28,7 @@ function App() {
 
         {/* <Route path={'/Login'} element={<Login />} /> */}
         {/* </Routes> */}
+        </CourseProvider>
       </Provider>
     </>
   );

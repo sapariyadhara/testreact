@@ -7,7 +7,7 @@ const init = {
 }
 
 export const courseReducer = (state = init , action) => {
-    console.log(action);
+    // console.log(action , state);
     switch(action.type) {
         case ActionTypes.GET_COURSE :
             return {
